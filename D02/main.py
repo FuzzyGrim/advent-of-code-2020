@@ -1,11 +1,11 @@
 with open("input.txt") as file:
-    data = file.read().split('\n')
+    data = file.read().splitlines()
 
 
 
 valid = 0
 
-for i in range(0, len(data) - 1):
+for i in range(0, len(data)):
    strings = data[i].split()
    policy = strings[0].split("-")
    letter = strings[1][0]
@@ -20,7 +20,7 @@ print(valid)
 
 valid = 0
 
-for i in range(0, len(data) - 1):
+for i in range(0, len(data)):
    strings = data[i].split()
    policy = strings[0].split("-")
    letter = strings[1][0]

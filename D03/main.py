@@ -1,12 +1,12 @@
 with open("input.txt") as file:
-    data = file.read().split('\n')
+    data = file.read().splitlines()
 
 
 
 position = 3
 count = 0
 
-for row in data[1:(len(data) - 1)]:
+for row in data[1:(len(data))]:
     if row[position] == "#":
         count += 1
     position += 3
@@ -24,7 +24,7 @@ count_p2 = 1
 for i, j in zip(rights, downs):
     i_temp = i
     current_count = 0
-    for row in data[j:(len(data) - 1):j]:
+    for row in data[j:len(data):j]:
         if row[i] == "#":
             current_count += 1
 
